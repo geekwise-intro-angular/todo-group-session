@@ -1,0 +1,14 @@
+{{message}}
+
+<input type="text" ng-model="inputModel"/><button ng-click="get_todos()">get todos</button>
+
+<button ng-click="push_todo(inputModel)">Submit</button>
+
+<ul>
+	<li ng-repeat="thing in things_todo" ng-click="read(thing)">
+		{{thing}}
+		<button ng-click="edit($index)">edit</button>
+		<button ng-click="delete($index)">remove</button>
+	</li>
+
+</ul>
